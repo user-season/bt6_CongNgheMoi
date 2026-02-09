@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Distribution / packaging
+
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Django stuff:
+
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Static files
+
+staticfiles/
+static/
+
+# Local settings
+
+local_settings.py
+
+# Environment variables
+
+.env
+.env.*
+
+# VS Code
+
+.vscode/
+
+# PyCharm
+
+.idea/
+
+# Jupyter Notebook
+
+.ipynb_checkpoints/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+
+# Migrations (optional, remove if you want to track them)
+
+**/migrations/*.py
+!**/migrations/**init**.py
