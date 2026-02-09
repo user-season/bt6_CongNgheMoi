@@ -11,7 +11,7 @@ from django.conf import settings
 def get_dataset_stats():
     try:
         parent_dir = os.path.dirname(settings.BASE_DIR)
-        data_path = os.path.join(parent_dir, 'train_pipeline', 'data', 'iris.csv')
+        data_path = os.path.join(parent_dir, 'train_pipeline', 'data', 'Iris.csv')
         
         if not os.path.exists(data_path):
             return {}
@@ -58,7 +58,7 @@ def get_dataset_stats():
 def run_training():
     try:
         parent_dir = os.path.dirname(settings.BASE_DIR)
-        data_path = os.path.join(parent_dir, 'train_pipeline', 'data', 'iris.csv')
+        data_path = os.path.join(parent_dir, 'train_pipeline', 'data', 'Iris.csv')
 
         if not os.path.exists(data_path):
             return f"Lỗi: Không tìm thấy file tại {data_path}"

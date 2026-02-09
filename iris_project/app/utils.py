@@ -1,14 +1,14 @@
 import os
 import pandas as pd
 from django.conf import settings
-    
+
 
 
 def get_global_limits():
     """Hàm lấy giới hạn Min/Max của toàn bộ dataset để validate đầu vào"""
     try:
         parent_dir = os.path.dirname(settings.BASE_DIR)
-        data_path = os.path.join(parent_dir, 'train_pipeline', 'data', 'iris.csv')
+        data_path = os.path.join(parent_dir, 'train_pipeline', 'data', 'Iris.csv')
         
         if not os.path.exists(data_path):
             print('read file data')
