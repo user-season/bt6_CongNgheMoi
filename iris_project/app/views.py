@@ -47,24 +47,24 @@ def index(request):
 
             # 2. KIỂM TRA LOGIC DỰA TRÊN DATASET (Có nới lỏng biên độ 1 xíu để linh hoạt)
             # Ví dụ: Cho phép nhập lớn hơn Max của dataset một chút (buffer)
-            BUFFER = 1.0 # Cho phép sai số 1cm
+            BUFFER = 0 # Cho phép sai số
             
             # Hàm kiểm tra nhanh
             def check_limit(val, name, key):
                 limit = global_limits[key]
-                # Chỉ kiểm tra max (vì min > 0 đã chặn ở HTML rồi)
                 if val > limit['max'] + BUFFER:
                     raise ValueError(f"{name} quá lớn! (Dữ liệu thực tế Max chỉ {limit['max']}cm)")
+                elif val < limit['min'] + BUFFER:
+                    raise ValueError(f"{name} quá bé! (Dữ liệu thực tế Min chỉ {limit['min']}cm)")
 
-            check_limit(sl, "Đài hoa (Dài)", 'sepal_length')
-            check_limit(sw, "Đài hoa (Rộng)", 'sepal_width')
-            check_limit(pl, "Cánh hoa (Dài)", 'petal_length')
-            check_limit(pw, "Cánh hoa (Rộng)", 'petal_width')
+            check_limit(sl, "Chiều dài Đài hoa", 'sepal_length')
+            check_limit(sw, "Chiều rộng Đài hoa", 'sepal_width')
+            check_limit(pl, "Chiều dài Cánh hoa", 'petal_length')
+            check_limit(pw, "Chiều rộng Cánh hoa", 'petal_width')
 
             # --- DỰ ĐOÁN ---
             pred_name, confidence, detailed_proba = IrisModelLoader.predict([sl, sw, pl, pw])
             
-            # ... (Phần x [... (Phần x] xử lý kết quả giữ nguyên như cũ) ...
             if pred_name: 
                  if confidence < 60:
                     result = "Không xác định"
@@ -86,7 +86,7 @@ def index(request):
         'input_data': input_data,
         'train_msg': request.session.pop('train_msg', None),
         'stats_data': stats_data,
-        'limits': global_limits # <--- TRUYỀN BIẾN LIMITS SANG HTML
+        'limits': global_limits
     })
 
 

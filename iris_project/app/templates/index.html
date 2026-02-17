@@ -101,10 +101,8 @@
                             <div class="col">
                                 <label class="form-label small fw-bold">Chiều dài (Length)</label>
                                 <input type="number" step="0.1" required
-                                    min="0.1" 
-                                    max="{{ limits.sepal_length.max|add:'2' }}" 
                                     class="form-control" name="sepal_length" 
-                                    placeholder="Max: {{ limits.sepal_length.max }}" 
+                                    placeholder="Chiều dài đài hoa..." 
                                     value="{{ input_data.sl }}">
                                 <div class="form-text" style="font-size: 0.7rem;">
                                     Min: {{ limits.sepal_length.min }} - Max: {{ limits.sepal_length.max }}
@@ -114,10 +112,8 @@
                             <div class="col">
                                 <label class="form-label small fw-bold">Chiều rộng (Width)</label>
                                 <input type="number" step="0.1" required
-                                    min="0.1" 
-                                    max="{{ limits.sepal_width.max|add:'2' }}" 
                                     class="form-control" name="sepal_width" 
-                                    placeholder="Max: {{ limits.sepal_width.max }}" 
+                                    placeholder="Chiều rộng đài hoa..." 
                                     value="{{ input_data.sw }}">
                                 <div class="form-text" style="font-size: 0.7rem;">
                                     Min: {{ limits.sepal_width.min }} - Max: {{ limits.sepal_width.max }}
@@ -132,10 +128,8 @@
                             <div class="col">
                                 <label class="form-label small fw-bold">Chiều dài (Length)</label>
                                 <input type="number" step="0.1" required
-                                    min="0.1" 
-                                    max="{{ limits.petal_length.max|add:'2' }}" 
                                     class="form-control" name="petal_length" 
-                                    placeholder="Max: {{ limits.petal_length.max }}" 
+                                    placeholder="Chiều dài cánh hoa..." 
                                     value="{{ input_data.pl }}">
                                 <div class="form-text" style="font-size: 0.7rem;">
                                     Min: {{ limits.petal_length.min }} - Max: {{ limits.petal_length.max }}
@@ -145,10 +139,8 @@
                             <div class="col">
                                 <label class="form-label small fw-bold">Chiều rộng (Width)</label>
                                 <input type="number" step="0.1" required
-                                    min="0.1" 
-                                    max="{{ limits.petal_width.max|add:'2' }}" 
                                     class="form-control" name="petal_width" 
-                                    placeholder="Max: {{ limits.petal_width.max }}" 
+                                    placeholder="Chiều rộng cánh hoa..." 
                                     value="{{ input_data.pw }}">
                                 <div class="form-text" style="font-size: 0.7rem;">
                                     Min: {{ limits.petal_width.min }} - Max: {{ limits.petal_width.max }}
