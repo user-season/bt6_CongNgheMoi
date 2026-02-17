@@ -65,13 +65,13 @@ def index(request):
             # --- DỰ ĐOÁN ---
             pred_name, confidence, detailed_proba = IrisModelLoader.predict([sl, sw, pl, pw])
             
-            # if pred_name: 
-            #     if confidence < 60:
+            if pred_name: 
+                # if confidence < 60:
             #         result = "Không xác định"
             #         prob_msg = "Chỉ số không khớp với bất kỳ dữ liệu nào đã học."
             #     else:
-            #         result = pred_name
-            #         prob_msg = f"Độ chính xác: {confidence:.2f}%"
+                result = pred_name
+                prob_msg = f"Độ chính xác: {confidence:.2f}%"
 
         except ValueError as e:
             error_msg = str(e)
