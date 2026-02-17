@@ -122,6 +122,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.ngrok-free.dev',
-    'https://*.ngrok.io',
+    'https://*.colab.dev',
+    'https://*.prod.colab.dev',
 ]
